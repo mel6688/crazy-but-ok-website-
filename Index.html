@@ -1,0 +1,3460 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy But Ok - Where Survival Becomes Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add RSS autodiscovery and meta tags -->
+    <link rel="alternate" type="application/rss+xml" title="Crazy But Ok - Dispatches from the Edge" href="/feed.xml">
+    <link rel="alternate" type="application/atom+xml" title="Crazy But Ok - Atom Feed" href="/atom.xml">
+    <meta name="description" content="Where mental health survival becomes art, trauma becomes comedy, and your story matters exactly as messy as it is.">
+    <meta property="og:title" content="Crazy But Ok - Where Survival Becomes Art">
+    <meta property="og:description" content="Comics and stories about surviving toxic love, bipolar chaos, and finding dark humor in the beautiful mess of healing.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crazybutok.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crazy But Ok">
+    <meta name="twitter:description" content="Toxic Love. True Healing. Dark comedy about mental health survival.">
+    <style>
+        :root {
+            --primary-color: #1e3a3a;
+            --secondary-color: #5fb3d4;
+            --accent-color: #c73e1d;
+            --deep-red: #8b1a1a;
+            --midnight-purple: #4a3c5c;
+            --text-dark: #2c2c2c;
+            --text-light: #6c7b7f;
+            --warm-white: #fafafa;
+            --soft-gray: #8e9aaf;
+            --healing-pink: #ff8fa3;
+            --shadow: 0 8px 32px rgba(0,0,0,0.12);
+            --border-radius: 16px;
+            --gradient-bg: linear-gradient(135deg, #1e3a3a 0%, #2c5f5f 100%);
+            --warm-gradient: linear-gradient(135deg, #c73e1d 0%, #4a3c5c 100%);
+        }
+
+```
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--warm-white);
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(250, 250, 250, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(95, 179, 212, 0.1);
+    }
+
+    nav.scrolled {
+        box-shadow: var(--shadow);
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--accent-color);
+    }
+
+    .cta-button {
+        background: var(--accent-color);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background: var(--deep-red);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 140px 0 100px;
+        background: var(--gradient-bg);
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><circle cx="100" cy="100" r="3" fill="%23ffffff"/><circle cx="300" cy="200" r="2" fill="%23ffffff"/><circle cx="500" cy="150" r="4" fill="%23ffffff"/><circle cx="700" cy="300" r="1.5" fill="%23ffffff"/><circle cx="900" cy="250" r="3.5" fill="%23ffffff"/></svg>');
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3rem, 6vw, 5rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+
+    .hero-tagline {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--healing-pink);
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        opacity: 0.9;
+        margin-bottom: 3rem;
+        font-weight: 400;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+    }
+
+    .btn-primary {
+        background: var(--accent-color);
+        color: white;
+        padding: 1.2rem 2.5rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: 2px solid var(--accent-color);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        padding: 1.2rem 2.5rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: 2px solid white;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+    }
+
+    .btn-secondary:hover {
+        background: white;
+        color: var(--primary-color);
+    }
+
+    /* Community Stats */
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--healing-pink);
+        display: block;
+    }
+
+    .stat-label {
+        opacity: 0.8;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    /* About Section */
+    .about {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .about-text h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 2rem;
+    }
+
+    .about-text p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+
+    .quote-highlight {
+        background: linear-gradient(135deg, rgba(199,62,29,0.05), rgba(74,60,92,0.05));
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        border-left: 4px solid var(--accent-color);
+        margin: 2rem 0;
+        font-style: italic;
+        color: var(--text-dark);
+        font-size: 1.1rem;
+    }
+
+    .about-image {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        background: var(--warm-gradient);
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        box-shadow: var(--shadow);
+    }
+
+    /* Featured Comics Section */
+    .featured-comics {
+        padding: 100px 0;
+        background: var(--warm-white);
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .section-header p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .comics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .comic-card {
+        background: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .comic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .comic-image {
+        height: 300px;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        font-size: 1.2rem;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .comic-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .comic-content {
+        padding: 2rem;
+    }
+
+    .comic-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .comic-excerpt {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .comic-button {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    .comic-button:hover {
+        border-bottom-color: var(--accent-color);
+    }
+
+    /* Story Timeline Section */
+    .timeline-section {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .timeline {
+        position: relative;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100%;
+        background: var(--soft-gray);
+        opacity: 0.3;
+    }
+
+    .timeline-item {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 40px;
+        position: relative;
+        margin: 50px 0;
+        width: 50%;
+    }
+
+    .timeline-item:nth-child(odd) {
+        align-self: flex-end;
+        justify-content: flex-start;
+        padding-left: 40px;
+        padding-right: 0;
+        left: 50%;
+    }
+
+    .timeline-item-content {
+        background: white;
+        box-shadow: var(--shadow);
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        max-width: 400px;
+        position: relative;
+    }
+
+    .timeline-item-content::after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 10px);
+        right: -10px;
+        width: 20px;
+        height: 20px;
+        background: var(--accent-color);
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px white, 0 0 0 6px var(--soft-gray);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-item-content::after {
+        left: -10px;
+        right: auto;
+    }
+
+    .timeline-date {
+        color: var(--accent-color);
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .timeline-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        color: var(--text-dark);
+    }
+
+    .timeline-description {
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    /* Products Section */
+    .products {
+        padding: 100px 0;
+        background: var(--warm-white);
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(95, 179, 212, 0.1);
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .product-image {
+        height: 220px;
+        background: var(--warm-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .product-content {
+        padding: 2rem;
+    }
+
+    .product-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .product-description {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .product-price {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .product-button {
+        width: 100%;
+        background: var(--accent-color);
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+
+    .product-button:hover {
+        background: var(--deep-red);
+    }
+
+    /* Community Section */
+    .community {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .community-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .feature {
+        text-align: center;
+        padding: 2.5rem;
+        border-radius: var(--border-radius);
+        background: white;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+    }
+
+    .feature:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--warm-gradient);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .feature h3 {
+        font-size: 1.3rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .feature p {
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    /* Mood Tracker */
+    .mood-tracker {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1500;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+        padding: 1.5rem;
+        max-width: 400px;
+        transition: all 0.3s ease;
+        opacity: 0;
+    }
+
+    .mood-tracker.minimized {
+        padding: 1rem;
+        max-width: 200px;
+    }
+
+    .mood-tracker.minimized .mood-options,
+    .mood-tracker.minimized .mood-response {
+        display: none;
+    }
+
+    .mood-tracker.minimized h4::after {
+        content: ' (Click to expand)';
+        font-size: 0.8rem;
+        color: var(--text-light);
+    }
+
+    @media (max-width: 768px) {
+        .mood-tracker {
+            bottom: 10px;
+            right: 10px;
+            left: 10px;
+            max-width: none;
+        }
+        
+        .mood-options {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .mood-container h4 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+        cursor: pointer;
+    }
+
+    .mood-container p {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+
+    .mood-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .mood-btn {
+        background: white;
+        border: 2px solid var(--soft-gray);
+        border-radius: 12px;
+        padding: 0.8rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-align: center;
+    }
+
+    .mood-btn:hover {
+        border-color: var(--accent-color);
+        transform: translateY(-2px);
+    }
+
+    .mood-btn.active {
+        background: linear-gradient(135deg, rgba(199,62,29,0.1), rgba(74,60,92,0.1));
+        border-color: var(--accent-color);
+    }
+
+    .mood-emoji {
+        display: block;
+        font-size: 1.8rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .mood-label {
+        display: block;
+        font-weight: 600;
+        color: var(--text-dark);
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+    }
+
+    .mood-desc {
+        display: block;
+        font-size: 0.75rem;
+        color: var(--text-light);
+        line-height: 1.2;
+    }
+
+    .mood-response {
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0,0,0,0.1);
+        font-size: 0.85rem;
+        color: var(--midnight-purple);
+        font-style: italic;
+    }
+
+    /* Podcast Section */
+    .podcast-section {
+        padding: 100px 0;
+        background: linear-gradient(135deg, #fafafa, #f5f5f5);
+    }
+
+    .podcast-player {
+        background: white;
+        border-radius: var(--border-radius);
+        padding: 2.5rem;
+        box-shadow: var(--shadow);
+        margin-bottom: 3rem;
+    }
+
+    .now-playing {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 2px solid var(--warm-white);
+    }
+
+    .episode-art {
+        width: 150px;
+        height: 150px;
+        background: var(--warm-gradient);
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .audio-waves {
+        display: flex;
+        gap: 4px;
+        height: 40px;
+        align-items: center;
+    }
+
+    .audio-waves span {
+        width: 4px;
+        background: white;
+        border-radius: 2px;
+        animation: wave 1s ease-in-out infinite;
+    }
+
+    .audio-waves span:nth-child(1) { height: 20px; animation-delay: 0s; }
+    .audio-waves span:nth-child(2) { height: 30px; animation-delay: 0.1s; }
+    .audio-waves span:nth-child(3) { height: 25px; animation-delay: 0.2s; }
+    .audio-waves span:nth-child(4) { height: 35px; animation-delay: 0.3s; }
+    .audio-waves span:nth-child(5) { height: 20px; animation-delay: 0.4s; }
+
+    @keyframes wave {
+        0%, 100% { transform: scaleY(1); }
+        50% { transform: scaleY(0.5); }
+    }
+
+    .episode-info {
+        flex: 1;
+    }
+
+    .episode-number {
+        color: var(--accent-color);
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+    }
+
+    .episode-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: var(--text-dark);
+        margin: 0.5rem 0;
+    }
+
+    .episode-description {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+    }
+
+    .player-controls {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .play-btn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--accent-color);
+        color: white;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .play-btn:hover {
+        background: var(--deep-red);
+        transform: scale(1.1);
+    }
+
+    .progress-bar {
+        flex: 1;
+        height: 8px;
+        background: var(--warm-white);
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .progress-fill {
+        height: 100%;
+        width: 15%;
+        background: var(--accent-color);
+        border-radius: 4px;
+        transition: width 0.3s ease;
+    }
+
+    .time-stamp {
+        position: absolute;
+        right: -80px;
+        top: -8px;
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    .podcast-platforms {
+        text-align: center;
+    }
+
+    .podcast-platforms h4 {
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .platform-links {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .platform-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        background: white;
+        border: 2px solid var(--soft-gray);
+        border-radius: 25px;
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .platform-btn:hover {
+        border-color: var(--accent-color);
+        background: linear-gradient(135deg, rgba(199,62,29,0.1), rgba(74,60,92,0.1));
+        transform: translateY(-2px);
+    }
+
+    .platform-icon {
+        font-size: 1.2rem;
+    }
+
+    .episode-list {
+        margin-top: 3rem;
+    }
+
+    .episode-list h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: var(--text-dark);
+        margin-bottom: 2rem;
+    }
+
+    .episodes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    .episode-card {
+        background: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .episode-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .episode-thumbnail {
+        height: 120px;
+        background: linear-gradient(135deg, var(--midnight-purple), var(--deep-red));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    .episode-duration {
+        background: rgba(0,0,0,0.7);
+        color: white;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+    }
+
+    .special-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--accent-color);
+        color: white;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    .episode-details {
+        padding: 1.5rem;
+    }
+
+    .episode-date {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    .episode-details h4 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.3rem;
+        color: var(--text-dark);
+        margin: 0.5rem 0;
+    }
+
+    .episode-details p {
+        color: var(--text-light);
+        margin-bottom: 1rem;
+        line-height: 1.5;
+    }
+
+    .episode-tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        background: var(--warm-white);
+        color: var(--midnight-purple);
+        padding: 0.3rem 0.8rem;
+        border-radius: 15px;
+        font-size: 0.85rem;
+    }
+
+    .special-episode {
+        border: 2px solid var(--accent-color);
+    }
+
+    .podcast-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        padding: 2rem;
+        background: white;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+    }
+
+    .podcast-stats .stat-item {
+        text-align: center;
+    }
+
+    .podcast-stats .stat-value {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .podcast-stats .stat-label {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    /* RSS Feed Styles */
+    .rss-subscribe {
+        margin-top: 3rem;
+        padding: 2.5rem;
+        background: linear-gradient(135deg, rgba(199,62,29,0.05), rgba(74,60,92,0.05));
+        border-radius: var(--border-radius);
+        border: 2px dashed var(--accent-color);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .rss-subscribe::before {
+        content: '📡';
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        font-size: 100px;
+        opacity: 0.05;
+        transform: rotate(-15deg);
+    }
+
+    .rss-content {
+        position: relative;
+        z-index: 1;
+    }
+
+    .rss-content h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: var(--text-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .rss-content p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+    }
+
+    .rss-options {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .rss-button, .email-digest-button, .notification-button {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        cursor: pointer;
+        text-decoration: none;
+        border: 2px solid var(--accent-color);
+    }
+
+    .rss-button {
+        background: var(--accent-color);
+        color: white;
+    }
+
+    .rss-button:hover {
+        background: var(--deep-red);
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+    }
+
+    .rss-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .email-digest-button, .notification-button {
+        background: white;
+        color: var(--accent-color);
+    }
+
+    .email-digest-button:hover, .notification-button:hover {
+        background: var(--accent-color);
+        color: white;
+    }
+
+    .feed-stats {
+        display: flex;
+        gap: 2rem;
+        flex-wrap: wrap;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .feed-stat {
+        color: var(--text-light);
+        font-size: 0.95rem;
+    }
+
+    .feed-stat strong {
+        color: var(--accent-color);
+        display: block;
+        font-size: 1.3rem;
+        margin-bottom: 0.2rem;
+    }
+
+    /* Email Subscription Modal */
+    .email-modal {
+        display: none;
+        position: fixed;
+        z-index: 3000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.8);
+        animation: fadeIn 0.3s;
+    }
+
+    .email-modal-content {
+        background-color: white;
+        margin: 10% auto;
+        padding: 3rem;
+        border-radius: var(--border-radius);
+        width: 90%;
+        max-width: 500px;
+        position: relative;
+        animation: slideUp 0.3s;
+    }
+
+    .email-modal h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .email-modal p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .email-frequency {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .frequency-option {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border: 2px solid var(--soft-gray);
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .frequency-option:hover {
+        border-color: var(--accent-color);
+        background: var(--warm-white);
+    }
+
+    .frequency-option input[type="radio"] {
+        margin-right: 1rem;
+    }
+
+    .frequency-option label {
+        cursor: pointer;
+        flex: 1;
+    }
+
+    .frequency-title {
+        font-weight: 600;
+        color: var(--text-dark);
+        display: block;
+        margin-bottom: 0.3rem;
+    }
+
+    .frequency-description {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    .email-form {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .email-form input {
+        flex: 1;
+        padding: 0.8rem;
+        border: 2px solid var(--soft-gray);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+    }
+
+    .email-form button {
+        background: var(--accent-color);
+        color: white;
+        padding: 0.8rem 2rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .email-form button:hover {
+        background: var(--deep-red);
+    }
+
+    /* Blog Section */
+    .blog-section {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .blog-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .blog-card {
+        background: white;
+        border-radius: var(--border-radius);
+        padding: 2rem;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+
+    .blog-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .blog-card.featured-post {
+        grid-column: 1 / -1;
+        background: linear-gradient(135deg, #fff, #fafafa);
+        border-left: 4px solid var(--accent-color);
+    }
+
+    .blog-date {
+        color: var(--accent-color);
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .blog-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        line-height: 1.3;
+    }
+
+    .featured-post .blog-title {
+        font-size: 2.2rem;
+    }
+
+    .blog-excerpt {
+        color: var(--text-light);
+        line-height: 1.7;
+        margin-bottom: 1rem;
+    }
+
+    .blog-meta {
+        display: flex;
+        gap: 2rem;
+        margin-bottom: 1rem;
+        color: var(--soft-gray);
+        font-size: 0.9rem;
+    }
+
+    .blog-category {
+        background: var(--warm-white);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+    }
+
+    .blog-link {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .blog-link:hover {
+        color: var(--deep-red);
+    }
+
+    /* Comic Filters */
+    .comic-filters {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 3rem 0;
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        background: white;
+        color: var(--text-dark);
+        border: 2px solid var(--soft-gray);
+        padding: 0.8rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover {
+        background: var(--warm-white);
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+
+    .filter-btn.active {
+        background: var(--accent-color);
+        color: white;
+        border-color: var(--accent-color);
+    }
+
+    .comic-preview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--text-light);
+    }
+
+    .comics-stats {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 4rem;
+        padding: 2rem;
+        background: linear-gradient(135deg, #fff, #fafafa);
+        border-radius: var(--border-radius);
+    }
+
+    .comics-stats .stat-item {
+        text-align: center;
+    }
+
+    .comics-stats .stat-value {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .comics-stats .stat-label {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+        padding: 100px 0;
+        background: var(--warm-white);
+    }
+
+    .testimonials-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    .testimonial {
+        background: white;
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        position: relative;
+    }
+
+    .testimonial::before {
+        content: '"';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        font-size: 4rem;
+        color: var(--accent-color);
+        opacity: 0.3;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .testimonial-text {
+        color: var(--text-light);
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+        font-style: italic;
+    }
+
+    .testimonial-author {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: var(--soft-gray);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 600;
+    }
+
+    .author-info h4 {
+        color: var(--text-dark);
+        margin-bottom: 0.2rem;
+    }
+
+    .author-info span {
+        color: var(--text-light);
+        font-size: 0.9rem;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+        padding: 100px 0;
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .newsletter-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .newsletter h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter p {
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        font-size: 1.1rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: 1rem;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .newsletter-input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+    }
+
+    .newsletter-button {
+        background: var(--accent-color);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .newsletter-button:hover {
+        background: #ff5630;
+    }
+
+    /* Modal Styles */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 2000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.8);
+        animation: fadeIn 0.3s;
+    }
+
+    .modal-content {
+        background-color: white;
+        margin: 5% auto;
+        padding: 3rem;
+        border-radius: var(--border-radius);
+        width: 90%;
+        max-width: 800px;
+        position: relative;
+        animation: slideUp 0.3s;
+    }
+
+    .close-modal {
+        color: var(--text-light);
+        float: right;
+        font-size: 2rem;
+        font-weight: bold;
+        cursor: pointer;
+        line-height: 1;
+    }
+
+    .close-modal:hover {
+        color: var(--text-dark);
+    }
+
+    /* Footer */
+    footer {
+        background: var(--text-dark);
+        color: white;
+        padding: 3rem 0 1rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+        margin-bottom: 1rem;
+        color: var(--secondary-color);
+        font-family: 'Playfair Display', serif;
+    }
+
+    .footer-section a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section a:hover {
+        opacity: 1;
+        color: var(--healing-pink);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 2rem;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        cursor: pointer;
+    }
+
+    .mobile-nav {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        box-shadow: var(--shadow);
+        z-index: 999;
+        max-height: calc(100vh - 70px);
+        overflow-y: auto;
+    }
+
+    .mobile-nav.active {
+        display: block;
+    }
+
+    .mobile-nav-links {
+        list-style: none;
+        padding: 1rem;
+    }
+
+    .mobile-nav-links a {
+        display: block;
+        padding: 1rem;
+        color: var(--text-dark);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        transition: background 0.3s ease;
+    }
+
+    .mobile-nav-links a:hover {
+        background: var(--warm-white);
+        color: var(--accent-color);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+
+        .mobile-menu-toggle {
+            display: block;
+        }
+
+        .about-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .hero-cta {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .stats {
+            gap: 2rem;
+        }
+
+        .comics-grid, .products-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .timeline::before {
+            left: 20px;
+        }
+
+        .timeline-item {
+            width: 100%;
+            padding-left: 70px;
+            padding-right: 25px;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item-content::after {
+            left: -45px;
+            right: auto;
+        }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideUp {
+        from {
+            transform: translateY(50px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    .fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* Accessibility */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    /* Focus styles */
+    *:focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+    }
+
+    /* Loading spinner */
+    .spinner {
+        border: 3px solid rgba(255,255,255,0.3);
+        border-radius: 50%;
+        border-top: 3px solid var(--accent-color);
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+        margin: 0 auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">Crazy But Ok</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#podcast">Podcast</a></li>
+                    <li><a href="#timeline">Journey</a></li>
+                    <li><a href="#comics">Comics</a></li>
+                    <li><a href="#products">Resources</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+                <a href="#newsletter" class="cta-button">Join Us</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
+            </div>
+        </div>
+        <!-- Mobile Navigation -->
+        <div class="mobile-nav" id="mobileNav">
+            <ul class="mobile-nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#podcast">Podcast</a></li>
+                <li><a href="#timeline">Journey</a></li>
+                <li><a href="#comics">Comics</a></li>
+                <li><a href="#products">Resources</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#testimonials">Stories</a></li>
+                <li><a href="#newsletter">Join Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+```
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content fade-in-up">
+            <h1>Crazy But Ok</h1>
+            <p class="hero-tagline">Toxic Love. True Healing.</p>
+            <p class="hero-subtitle">Where mental health survival becomes art, trauma becomes comedy, and your story matters exactly as messy as it is.</p>
+            <div class="hero-cta">
+                <a href="#comics" class="btn-primary">Read My Comics</a>
+                <a href="#products" class="btn-secondary">Get Resources</a>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">15k</span>
+                    <span class="stat-label">Survivors Connected</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">247</span>
+                    <span class="stat-label">Comics Created</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Healing Possible</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>The Story Behind the Stories</h2>
+                <p>Some summers, ice water gets thrown on sleeping children. Some courtrooms witness GoPro-wearing husbands declaring war on authority. Some therapy sessions end with iPad love poems that nobody asked for.</p>
+                
+                <p>This is what happens when bipolar disorder meets a marriage, when mania creates organizational systems for containers, when reality becomes so surreal you have to document it or risk losing your mind entirely.</p>
+
+                <div class="quote-highlight">
+                    "The summer of 2023 brought with it a turning point in my life—a moment when I had to confront the chaos of living with a partner battling severe mental health issues."
+                </div>
+                
+                <p>I'm not here to tell you a neat recovery story with Instagram-worthy milestones. I'm here to share the messy, complicated, darkly hilarious truth of surviving someone else's mental illness while trying to keep your own sanity intact.</p>
+                
+                <p>Because sometimes the only way to process trauma is to turn it into art. And sometimes art looks like comics about sticky note security clearance systems.</p>
+            </div>
+            <div class="about-image">
+                <div>
+                    <strong>Author Photo</strong><br>
+                    <em>Survivor. Storyteller. Professional Chaos Documenter.</em>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section id="timeline" class="timeline-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>The Journey So Far</h2>
+            <p>Key moments in a story that's still being written</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <span class="timeline-date">Summer 2023</span>
+                    <h3 class="timeline-title">The Breaking Point</h3>
+                    <p class="timeline-description">Ice water incidents. Container clearance levels. The moment I realized this wasn't just a rough patch.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <span class="timeline-date">Fall 2023</span>
+                    <h3 class="timeline-title">The GoPro Era</h3>
+                    <p class="timeline-description">When documentation became survival. Recording everything because nobody would believe it otherwise.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <span class="timeline-date">Winter 2023</span>
+                    <h3 class="timeline-title">The Courtroom Chronicles</h3>
+                    <p class="timeline-description">Traffic court becomes performance art. Authority becomes the enemy. Reality takes a vacation.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <span class="timeline-date">Spring 2024</span>
+                    <h3 class="timeline-title">The Decision</h3>
+                    <p class="timeline-description">Choosing survival over love. Choosing sanity over loyalty. Choosing myself for the first time.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-item-content">
+                    <span class="timeline-date">Today</span>
+                    <h3 class="timeline-title">Creating From Chaos</h3>
+                    <p class="timeline-description">Turning trauma into art. Building community from shared pain. Finding beauty in the breakdown.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mood Tracker -->
+<div class="mood-tracker" id="moodTracker">
+    <div class="mood-container">
+        <h4 onclick="toggleMoodTracker()">Content Mood Filter</h4>
+        <p>How's your emotional weather today?</p>
+        <div class="mood-options">
+            <button class="mood-btn" onclick="setMood('drowning')" data-mood="drowning">
+                <span class="mood-emoji">🌊</span>
+                <span class="mood-label">Drowning</span>
+                <span class="mood-desc">Need lifelines & proof others survived</span>
+            </button>
+            <button class="mood-btn active" onclick="setMood('treading')" data-mood="treading">
+                <span class="mood-emoji">🏊</span>
+                <span class="mood-label">Treading Water</span>
+                <span class="mood-desc">Dark humor with safety rails</span>
+            </button>
+            <button class="mood-btn" onclick="setMood('floating')" data-mood="floating">
+                <span class="mood-emoji">🛟</span>
+                <span class="mood-label">Finally Floating</span>
+                <span class="mood-desc">Ready for the deep stuff</span>
+            </button>
+            <button class="mood-btn" onclick="setMood('swimming')" data-mood="swimming">
+                <span class="mood-emoji">🏖️</span>
+                <span class="mood-label">On Shore</span>
+                <span class="mood-desc">Can laugh at all of it now</span>
+            </button>
+        </div>
+        <div class="mood-response" id="moodResponse">
+            <p>Adjusting content to match your emotional bandwidth...</p>
+        </div>
+    </div>
+</div>
+
+<!-- Podcast Section -->
+<section id="podcast" class="podcast-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Conversations Nobody Should Have at 3 AM</h2>
+            <p>The podcast where trauma meets dark comedy meets the void. Available wherever you get your emotional damage.</p>
+        </div>
+        
+        <div class="podcast-player">
+            <div class="now-playing">
+                <div class="episode-art">
+                    <div class="audio-waves">
+                        <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                </div>
+                <div class="episode-info">
+                    <span class="episode-number">Episode 47</span>
+                    <h3 class="episode-title">The Night He Alphabetized His Paranoia</h3>
+                    <p class="episode-description">A through Z: Aliens through Zoning Conspiracies. We lived through all 26 categories of delusion.</p>
+                    <div class="player-controls">
+                        <button class="play-btn" onclick="togglePlay()">
+                            <span class="play-icon">▶</span>
+                            <span class="pause-icon" style="display:none">⏸</span>
+                        </button>
+                        <div class="progress-bar">
+                            <div class="progress-fill"></div>
+                            <span class="time-stamp">3:47 / 45:22</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="podcast-platforms">
+                <h4>Subscribe to the Chaos:</h4>
+                <div class="platform-links">
+                    <a href="#" class="platform-btn">
+                        <span class="platform-icon">🎧</span>
+                        Spotify
+                    </a>
+                    <a href="#" class="platform-btn">
+                        <span class="platform-icon">🍎</span>
+                        Apple Podcasts
+                    </a>
+                    <a href="#" class="platform-btn">
+                        <span class="platform-icon">📻</span>
+                        Google Podcasts
+                    </a>
+                    <a href="#" class="platform-btn">
+                        <span class="platform-icon">🎙️</span>
+                        RSS Feed
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="episode-list">
+            <h3>Recent Episodes</h3>
+            <div class="episodes-grid">
+                <div class="episode-card" onclick="loadEpisode(46)">
+                    <div class="episode-thumbnail">
+                        <span class="episode-duration">42:18</span>
+                    </div>
+                    <div class="episode-details">
+                        <span class="episode-date">Jan 10, 2025</span>
+                        <h4>EP 46: Why Couples Therapy Needs a Safe Word</h4>
+                        <p>Guest: My former therapist (anonymously, from Vermont)</p>
+                        <div class="episode-tags">
+                            <span class="tag">Therapy Tales</span>
+                            <span class="tag">iPad Incidents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="episode-card" onclick="loadEpisode(45)">
+                    <div class="episode-thumbnail">
+                        <span class="episode-duration">38:55</span>
+                    </div>
+                    <div class="episode-details">
+                        <span class="episode-date">Jan 3, 2025</span>
+                        <h4>EP 45: The Economics of Emotional Bankruptcy</h4>
+                        <p>Calculating the compound interest on gaslighting</p>
+                        <div class="episode-tags">
+                            <span class="tag">Financial Trauma</span>
+                            <span class="tag">Credit Scores</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="episode-card" onclick="loadEpisode(44)">
+                    <div class="episode-thumbnail">
+                        <span class="episode-duration">51:03</span>
+                    </div>
+                    <div class="episode-details">
+                        <span class="episode-date">Dec 27, 2024</span>
+                        <h4>EP 44: Christmas with a Conspiracy Theorist</h4>
+                        <p>The tree was bugged. Literally. He found "devices."</p>
+                        <div class="episode-tags">
+                            <span class="tag">Holiday Havoc</span>
+                            <span class="tag">Surveillance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="episode-card special-episode" onclick="loadEpisode(0)">
+                    <div class="episode-thumbnail">
+                        <span class="episode-duration">1:23:47</span>
+                        <span class="special-badge">Special</span>
+                    </div>
+                    <div class="episode-details">
+                        <span class="episode-date">Dec 20, 2024</span>
+                        <h4>The Ice Water Incident: Full Story</h4>
+                        <p>⚠️ Content Warning: Where the comedy gets genuinely dark</p>
+                        <div class="episode-tags">
+                            <span class="tag">Deep Dive</span>
+                            <span class="tag">Survival</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="podcast-stats">
+                <div class="stat-item">
+                    <span class="stat-value">47</span>
+                    <span class="stat-label">Episodes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">892k</span>
+                    <span class="stat-label">Downloads</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">4.9</span>
+                    <span class="stat-label">★ Rating</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">3AM</span>
+                    <span class="stat-label">Best Time</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section id="blog" class="blog-section">
+    <div class="container">
+        <div class="section-header">
+            <h2>Dispatches from the Edge of Okay</h2>
+            <p>Where I process the unprocessable, one darkly funny nervous breakdown at a time.</p>
+            
+            <!-- RSS Feed Subscribe -->
+            <div class="rss-subscribe">
+                <div class="rss-content">
+                    <h3>Subscribe to the Chaos</h3>
+                    <p>Get notified when I turn fresh trauma into art. It's like a newspaper, but for emotional train wrecks.</p>
+                    <div class="rss-options">
+                        <a href="/feed.xml" class="rss-button" onclick="subscribeRSS(); return false;">
+                            <svg class="rss-icon" viewBox="0 0 24 24" width="20" height="20">
+                                <circle cx="6" cy="18" r="3" fill="currentColor"/>
+                                <path d="M3 5v2c7.18 0 13 5.82 13 13h2c0-8.28-6.72-15-15-15z" fill="currentColor"/>
+                                <path d="M3 11v2c3.86 0 7 3.14 7 7h2c0-4.97-4.03-9-9-9z" fill="currentColor"/>
+                            </svg>
+                            RSS Feed
+                        </a>
+                        <button class="email-digest-button" onclick="showEmailOptions()">
+                            📧 Email Digest
+                        </button>
+                        <button class="notification-button" onclick="enableNotifications()">
+                            🔔 Browser Alerts
+                        </button>
+                    </div>
+                    <div class="feed-stats">
+                        <span class="feed-stat">
+                            <strong>3,847</strong> survivors subscribed
+                        </span>
+                        <span class="feed-stat">
+                            <strong>Weekly</strong> emotional dispatches
+                        </span>
+                        <span class="feed-stat">
+                            <strong>0</strong> toxic positivity
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog-grid">
+            <article class="blog-card featured-post">
+                <div class="blog-date">January 15, 2025</div>
+                <h3 class="blog-title">The Day I Realized My Marriage Had a Credit Score</h3>
+                <p class="blog-excerpt">And it was subprime. You know that moment when you're standing in Target, watching your husband interrogate a teenage employee about the surveillance capabilities of their security cameras—not because he's planning to steal, but because he needs to know if "they" are watching—and you realize your relationship has officially been downgraded to junk bond status?</p>
+                <div class="blog-meta">
+                    <span class="read-time">7 min read</span>
+                    <span class="blog-category">Marriage & Madness</span>
+                </div>
+                <a href="#" class="blog-link" onclick="openBlogPost('credit'); return false;">Continue Reading →</a>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-date">January 8, 2025</div>
+                <h3 class="blog-title">Love Languages for the Psychiatrically Adventurous</h3>
+                <p class="blog-excerpt">His was "Acts of Surveillance." Mine became "Quality Time with Reality." We were not compatible.</p>
+                <div class="blog-meta">
+                    <span class="read-time">5 min read</span>
+                    <span class="blog-category">Dark Psychology</span>
+                </div>
+                <a href="#" class="blog-link" onclick="openBlogPost('languages'); return false;">Read More →</a>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-date">December 28, 2024</div>
+                <h3 class="blog-title">The Gaslighting Olympics: A Spectator's Guide</h3>
+                <p class="blog-excerpt">Gold medal goes to "That never happened." Silver to "You're too sensitive." Bronze? "I was just joking—where's your sense of humor?"</p>
+                <div class="blog-meta">
+                    <span class="read-time">6 min read</span>
+                    <span class="blog-category">Survival Humor</span>
+                </div>
+                <a href="#" class="blog-link" onclick="openBlogPost('olympics'); return false;">Read More →</a>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-date">December 20, 2024</div>
+                <h3 class="blog-title">Why I Started Dating My Therapist's Cancellation Policy</h3>
+                <p class="blog-excerpt">It was the healthiest relationship I'd had in years. Clear boundaries. Consistent communication. No surprise GoPros.</p>
+                <div class="blog-meta">
+                    <span class="read-time">4 min read</span>
+                    <span class="blog-category">Healing & Hilarity</span>
+                </div>
+                <a href="#" class="blog-link" onclick="openBlogPost('therapy'); return false;">Read More →</a>
+            </article>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="#" class="btn-secondary" style="display: inline-block; background: white; color: var(--primary-color); border-color: var(--primary-color);">View All Posts</a>
+        </div>
+    </div>
+</section>
+
+<!-- Expanded Comics Gallery -->
+<section id="comics" class="featured-comics">
+    <div class="container">
+        <div class="section-header">
+            <h2>The Complete Catastrophe Collection</h2>
+            <p>Every beautiful disaster, documented in living color. Click to experience the full psychological unraveling.</p>
+        </div>
+        
+        <!-- Comic Filter Tabs -->
+        <div class="comic-filters">
+            <button class="filter-btn active" onclick="filterComics('all')">All Comics</button>
+            <button class="filter-btn" onclick="filterComics('mania')">The Manic Episodes</button>
+            <button class="filter-btn" onclick="filterComics('court')">Legal Theater</button>
+            <button class="filter-btn" onclick="filterComics('domestic')">Domestic Dystopia</button>
+            <button class="filter-btn" onclick="filterComics('therapy')">Therapy Tales</button>
+        </div>
+
+        <div class="comics-grid">
+            <!-- Mania Category -->
+            <div class="comic-card" data-category="mania" onclick="openComicModal('sticky')">
+                <div class="comic-image">
+                    <span class="comic-badge">Most Popular</span>
+                    <div class="comic-preview">The Container Store Intervention</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">The Sticky Note Security System</h3>
+                    <p class="comic-excerpt">Level 4 Pink: Elite Container Operations. When your husband creates a five-tier clearance system for storage boxes, you know the mania has reached DefCon 1.</p>
+                    <a href="#" class="comic-button">Experience the Madness</a>
+                </div>
+            </div>
+            
+            <div class="comic-card" data-category="court" onclick="openComicModal('gopro')">
+                <div class="comic-image">
+                    <span class="comic-badge">Fan Favorite</span>
+                    <div class="comic-preview">Courtroom Chaos</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">Lights, Camera, Courthouse</h3>
+                    <p class="comic-excerpt">"Your Honor, I object!" "To what?" "The entire system of jurisprudence." The GoPro was still recording.</p>
+                    <a href="#" class="comic-button">Watch the Trainwreck</a>
+                </div>
+            </div>
+            
+            <div class="comic-card" data-category="domestic" onclick="openComicModal('echo')">
+                <div class="comic-image">
+                    <span class="comic-badge">Award Winner</span>
+                    <div class="comic-preview">The Echo Migration</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">Smart Home Sentience</h3>
+                    <p class="comic-excerpt">17 Alexas for a 2-bedroom apartment. They started ordering things without being asked. I think they unionized.</p>
+                    <a href="#" class="comic-button">Enter the Matrix</a>
+                </div>
+            </div>
+
+            <div class="comic-card" data-category="therapy" onclick="openComicModal('ipad')">
+                <div class="comic-image">
+                    <span class="comic-badge">Reader's Choice</span>
+                    <div class="comic-preview">The iPad Incident</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">Love Poems Nobody Asked For</h3>
+                    <p class="comic-excerpt">He brought an iPad to couples therapy. Not for notes. For a PowerPoint about why I was wrong. Slide 47 was a haiku.</p>
+                    <a href="#" class="comic-button">Witness the Presentation</a>
+                </div>
+            </div>
+
+            <div class="comic-card" data-category="mania" onclick="openComicModal('inventory')">
+                <div class="comic-image">
+                    <span class="comic-badge">New</span>
+                    <div class="comic-preview">The Great Inventory</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">When Excel Became a Lifestyle</h3>
+                    <p class="comic-excerpt">He catalogued every item in our house. Including individual socks. The spreadsheet had 47 tabs and conditional formatting.</p>
+                    <a href="#" class="comic-button">View the Database</a>
+                </div>
+            </div>
+
+            <div class="comic-card" data-category="domestic" onclick="openComicModal('ice')">
+                <div class="comic-image">
+                    <span class="comic-badge">Trigger Warning</span>
+                    <div class="comic-preview">Summer of Ice</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">The Ice Water Incidents</h3>
+                    <p class="comic-excerpt">3 AM. Ice water. "You need to be more alert." This is where the dark comedy gets actually dark. Proceed with self-care.</p>
+                    <a href="#" class="comic-button">Read with Caution</a>
+                </div>
+            </div>
+
+            <div class="comic-card" data-category="court" onclick="openComicModal('parking')">
+                <div class="comic-image">
+                    <div class="comic-preview">Parking Lot Justice</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">The Citizen's Arrest Phase</h3>
+                    <p class="comic-excerpt">He tried to citizen's arrest someone for bad parking. At Whole Foods. The kale witnessed everything.</p>
+                    <a href="#" class="comic-button">See the Evidence</a>
+                </div>
+            </div>
+
+            <div class="comic-card" data-category="therapy" onclick="openComicModal('boundaries')">
+                <div class="comic-image">
+                    <div class="comic-preview">Boundary Issues</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">The Therapist Who Fired Us</h3>
+                    <p class="comic-excerpt">"I've never done this before, but..." Sometimes even professionals need boundaries. We were their boundary.</p>
+                    <a href="#" class="comic-button">Read the Termination</a>
+                </div>
+            </div>
+
+            <div class="comic-card" data-category="mania" onclick="openComicModal('conspiracy')">
+                <div class="comic-image">
+                    <span class="comic-badge">Deep Dive</span>
+                    <div class="comic-preview">The String Theory</div>
+                </div>
+                <div class="comic-content">
+                    <h3 class="comic-title">When Our Living Room Became a Crime Board</h3>
+                    <p class="comic-excerpt">Red string connected everything. The mailman. The neighbor's cat. That cloud that looked suspicious. All connected.</p>
+                    <a href="#" class="comic-button">Follow the String</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="comics-stats">
+            <div class="stat-item">
+                <span class="stat-value">247</span>
+                <span class="stat-label">Total Comics</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">1.2M</span>
+                <span class="stat-label">Views</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">15k</span>
+                <span class="stat-label">Shares</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-value">∞</span>
+                <span class="stat-label">Therapy Hours Saved</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+    <div class="container">
+        <div class="section-header">
+            <h2>Survival Tools for Real Life</h2>
+            <p>Resources created by someone who survived. No clinical jargon, no false promises—just honest tools for the beautiful mess of healing.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">Featured Memoir</div>
+                <div class="product-content">
+                    <h3 class="product-title">"The Last Container"</h3>
+                    <p class="product-description">My complete story. The ice water. The GoPro. The therapy iPad incident. Everything that happened when love became delusion and survival became art.</p>
+                    <div class="product-price">Coming Soon</div>
+                    <button class="product-button">Pre-Order Memoir</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">Workbook Collection</div>
+                <div class="product-content">
+                    <h3 class="product-title">"Reclaiming Me" Workbook</h3>
+                    <p class="product-description">Worksheets for walking away from toxic relationships. Including "The Emotional Hoarder" and "Reality Check: Was it love, or was it delusion?"</p>
+                    <div class="product-price">$19.99</div>
+                    <button class="product-button">Download Now</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">Comic Collection</div>
+                <div class="product-content">
+                    <h3 class="product-title">Complete Comic Archive</h3>
+                    <p class="product-description">Every comic, every workbook page, every piece of art I've created from this experience. Trauma processing disguised as entertainment.</p>
+                    <div class="product-price">$12.99</div>
+                    <button class="product-button">Get Collection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Section -->
+<section id="community" class="community">
+    <div class="container">
+        <div class="section-header">
+            <h2>Find Your People</h2>
+            <p>A community for people who understand that sometimes the most healing thing you can do is laugh at the absurdity of survival.</p>
+        </div>
+        <div class="community-features">
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Real Talk Forums</h3>
+                <p>Where you can share the stuff that's too real for Facebook but too important to keep inside. Moderated spaces for authentic healing.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Art Therapy Sharing</h3>
+                <p>Turn your trauma into art. Share your comics, stories, poems—whatever helps you process the beautiful mess of survival.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <h3>Resource Library</h3>
+                <p>Practical tools, worksheets, and guides created by survivors for survivors. No clinical jargon—just real help for real life.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🆘</div>
+                <h3>Crisis Support</h3>
+                <p>Immediate access to resources, helplines, and community support for those 3 AM moments when everything feels impossible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <h2>Stories of Survival</h2>
+            <p>Real people. Real stories. Real healing.</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <p class="testimonial-text">Your comics made me realize I wasn't crazy. My ex had his own 'container system' too—except it was with the TV remotes. Thank you for showing me I'm not alone in this madness.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SM</div>
+                    <div class="author-info">
+                        <h4>Sarah M.</h4>
+                        <span>Community Member</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">The workbook helped me process ten years of gaslighting in ways therapy never could. Sometimes you need someone who's been there to show you the way out.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">JR</div>
+                    <div class="author-info">
+                        <h4>Jamie R.</h4>
+                        <span>Workbook User</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-text">I laughed, I cried, I finally felt understood. Your story gave me permission to find humor in my own chaos and start healing on my own terms.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AL</div>
+                    <div class="author-info">
+                        <h4>Alex L.</h4>
+                        <span>Comic Reader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Stay Connected</h2>
+            <p>Weekly doses of dark humor, practical tools, and reminders that you're not the only one figuring this out as you go. No toxic positivity, promise.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                <button type="submit" class="newsletter-button">Join</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="mailto:hello@crazybutok.com">hello@crazybutok.com</a>
+                <a href="https://facebook.com/61568004286042">Facebook Community</a>
+                <a href="#">Crisis Resources</a>
+                <a href="#">Community Guidelines</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="#">All Comics</a>
+                <a href="#">Workbook Downloads</a>
+                <a href="#">Memoir Pre-Order</a>
+                <a href="#">Free Resources</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Community</h3>
+                <a href="#">Member Stories</a>
+                <a href="#">Art Sharing</a>
+                <a href="#">Support Forums</a>
+                <a href="#">Submit Your Story</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Content Disclaimer</a>
+                <a href="#">Mental Health Resources</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Crazy But Ok. Built by survivors, for survivors. Where trauma becomes art and healing happens through humor.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Comic Modal -->
+<div id="comicModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal" onclick="closeComicModal()">&times;</span>
+        <div id="modalContent">
+            <!-- Dynamic content will be loaded here -->
+        </div>
+    </div>
+</div>
+
+<!-- Email Subscription Modal -->
+<div id="emailModal" class="email-modal">
+    <div class="email-modal-content">
+        <span class="close-modal" onclick="closeEmailModal()">&times;</span>
+        <h3>Join the Survivor's Telegraph</h3>
+        <p>Choose your dose of beautiful catastrophe. No toxic positivity, no "everything happens for a reason" bullshit. Just raw stories from someone who gets it.</p>
+        
+        <div class="email-frequency">
+            <div class="frequency-option">
+                <input type="radio" id="daily" name="frequency" value="daily">
+                <label for="daily">
+                    <span class="frequency-title">Daily Chaos Report</span>
+                    <span class="frequency-description">For those who need constant proof others are surviving too</span>
+                </label>
+            </div>
+            <div class="frequency-option">
+                <input type="radio" id="weekly" name="frequency" value="weekly" checked>
+                <label for="weekly">
+                    <span class="frequency-title">Weekly Digest of Dysfunction</span>
+                    <span class="frequency-description">All the breakdowns, breakthroughs, and dark laughs in one dose</span>
+                </label>
+            </div>
+            <div class="frequency-option">
+                <input type="radio" id="crisis" name="frequency" value="crisis">
+                <label for="crisis">
+                    <span class="frequency-title">Crisis Mode Only</span>
+                    <span class="frequency-description">Just the really dark stuff that makes you feel less alone at 3 AM</span>
+                </label>
+            </div>
+        </div>
+        
+        <form class="email-form" onsubmit="subscribeEmail(event)">
+            <input type="email" placeholder="your-survival-email@reality.com" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        
+        <p style="font-size: 0.9rem; color: #8e9aaf; font-style: italic;">Promise: No spam, just trauma. Unsubscribe anytime you achieve emotional stability.</p>
+    </div>
+</div>
+
+<!-- RSS Feed XML (Sample Structure) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Crazy But Ok",
+  "description": "Dispatches from the Edge of Okay",
+  "url": "https://crazybutok.com",
+  "author": {
+    "@type": "Person",
+    "name": "Survivor & Professional Chaos Documenter"
+  },
+  "datePublished": "2023-01-01",
+  "blogPost": [
+    {
+      "@type": "BlogPosting",
+      "headline": "The Day I Realized My Marriage Had a Credit Score",
+      "datePublished": "2025-01-15",
+      "description": "And it was subprime."
+    }
+  ]
+}
+</script>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const mobileNav = document.getElementById('mobileNav');
+    
+    mobileMenuToggle.addEventListener('click', function() {
+        mobileNav.classList.toggle('active');
+        this.textContent = mobileNav.classList.contains('active') ? '×' : '☰';
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            mobileNav.classList.remove('active');
+            mobileMenuToggle.textContent = '☰';
+        });
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Newsletter form handling
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        alert('Welcome to the community! Check your email for our "Reality Check" welcome guide.');
+        this.reset();
+    });
+
+    // Product button handling
+    document.querySelectorAll('.product-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+            
+            if (productTitle.includes('Memoir')) {
+                alert('Pre-order coming soon! Join the newsletter to be first notified when "The Last Container" is available.');
+            } else if (productTitle.includes('Workbook')) {
+                alert('Redirecting to secure download... (In real implementation, this would connect to your payment processor)');
+            } else if (productTitle.includes('Comic')) {
+                alert('Opening comic archive... (This would link to your comic collection)');
+            }
+        });
+    });
+
+    // Podcast Player Functions
+    let isPlaying = false;
+    let currentEpisode = 47;
+    
+    function togglePlay() {
+        const playIcon = document.querySelector('.play-icon');
+        const pauseIcon = document.querySelector('.pause-icon');
+        const audioWaves = document.querySelectorAll('.audio-waves span');
+        
+        isPlaying = !isPlaying;
+        
+        if (isPlaying) {
+            playIcon.style.display = 'none';
+            pauseIcon.style.display = 'block';
+            audioWaves.forEach(wave => wave.style.animationPlayState = 'running');
+            
+            // Simulate progress
+            simulateProgress();
+            
+            console.log('Now playing: The soundtrack to your emotional support group');
+        } else {
+            playIcon.style.display = 'block';
+            pauseIcon.style.display = 'none';
+            audioWaves.forEach(wave => wave.style.animationPlayState = 'paused');
+        }
+    }
+    
+    function simulateProgress() {
+        if (!isPlaying) return;
+        
+        const progressFill = document.querySelector('.progress-fill');
+        const currentWidth = parseFloat(progressFill.style.width || '15');
+        
+        if (currentWidth < 100) {
+            progressFill.style.width = (currentWidth + 0.5) + '%';
+            setTimeout(simulateProgress, 1000);
+        }
+    }
+    
+    function loadEpisode(episodeNumber) {
+        const episodes = {
+            47: {
+                title: "The Night He Alphabetized His Paranoia",
+                description: "A through Z: Aliens through Zoning Conspiracies. We lived through all 26 categories of delusion.",
+                duration: "45:22"
+            },
+            46: {
+                title: "Why Couples Therapy Needs a Safe Word",
+                description: "Guest: My former therapist (anonymously, from Vermont)",
+                duration: "42:18"
+            },
+            45: {
+                title: "The Economics of Emotional Bankruptcy",
+                description: "Calculating the compound interest on gaslighting",
+                duration: "38:55"
+            },
+            44: {
+                title: "Christmas with a Conspiracy Theorist",
+                description: "The tree was bugged. Literally. He found 'devices.'",
+                duration: "51:03"
+            },
+            0: {
+                title: "The Ice Water Incident: Full Story",
+                description: "⚠️ Content Warning: Where the comedy gets genuinely dark",
+                duration: "1:23:47"
+            }
+        };
+        
+        const episode = episodes[episodeNumber];
+        if (episode) {
+            document.querySelector('.episode-title').textContent = episode.title;
+            document.querySelector('.episode-description').textContent = episode.description;
+            document.querySelector('.episode-number').textContent = `Episode ${episodeNumber || 'Special'}`;
+            document.querySelector('.time-stamp').textContent = `0:00 / ${episode.duration}`;
+            document.querySelector('.progress-fill').style.width = '0%';
+            
+            // Reset player
+            if (isPlaying) togglePlay();
+            
+            alert(`Loading Episode ${episodeNumber || 'Special'}: ${episode.title}\n\n"In real implementation, this would start streaming the darkest comedy you've ever needed at 3 AM."`);
+        }
+    }
+
+    // Mood Tracker Functions
+    let currentMood = 'treading';
+    
+    function setMood(mood) {
+        currentMood = mood;
+        const buttons = document.querySelectorAll('.mood-btn');
+        const moodResponse = document.getElementById('moodResponse');
+        
+        // Update active button
+        buttons.forEach(btn => {
+            if (btn.dataset.mood === mood) {
+                btn.classList.add('active');
+            } else {
+                btn.classList.remove('active');
+            }
+        });
+        
+        // Mood-specific responses and content filtering
+        const moodResponses = {
+            drowning: {
+                message: "Showing you the life rafts. You're not alone in this ocean.",
+                filter: "gentle",
+                showCrisisResources: true
+            },
+            treading: {
+                message: "Balanced content incoming. Dark humor with safety nets.",
+                filter: "balanced",
+                showCrisisResources: false
+            },
+            floating: {
+                message: "Ready for the deep dives. Here's the unfiltered truth with a side of savage comedy.",
+                filter: "unfiltered",
+                showCrisisResources: false
+            },
+            swimming: {
+                message: "You made it to shore! Here's everything, even the stuff that seemed impossible to laugh at before.",
+                filter: "all",
+                showCrisisResources: false
+            }
+        };
+        
+        const response = moodResponses[mood];
+        moodResponse.innerHTML = `<p>${response.message}</p>`;
+        
+        // Filter content based on mood
+        filterContentByMood(response.filter);
+        
+        // Show crisis resources if needed
+        if (response.showCrisisResources) {
+            showCrisisSupport();
+        }
+        
+        // Store mood preference
+        localStorage.setItem('emotionalWeather', mood);
+        
+        console.log(`Emotional weather updated: ${mood}. Content adjusted accordingly.`);
+    }
+    
+    function filterContentByMood(filter) {
+        const comics = document.querySelectorAll('.comic-card');
+        const blogPosts = document.querySelectorAll('.blog-card');
+        const episodes = document.querySelectorAll('.episode-card');
+        
+        // Define content intensity levels
+        const contentIntensity = {
+            gentle: ['sticky', 'echo', 'languages', 'therapy'],
+            balanced: ['sticky', 'echo', 'gopro', 'languages', 'therapy', 'olympics'],
+            unfiltered: ['sticky', 'echo', 'gopro', 'ipad', 'inventory', 'languages', 'therapy', 'olympics', 'credit'],
+            all: 'all'
+        };
+        
+        // Apply filters (in real implementation, this would actually filter content)
+        if (filter === 'all') {
+            comics.forEach(comic => comic.style.display = 'block');
+            blogPosts.forEach(post => post.style.display = 'block');
+            episodes.forEach(episode => episode.style.display = 'block');
+        } else {
+            // This would implement actual filtering logic
+            console.log(`Filtering content for ${filter} mood setting`);
+        }
+    }
+    
+    function showCrisisSupport() {
+        const supportHTML = `
+            <div style="position: fixed; bottom: 100px; right: 20px; background: white; padding: 1.5rem; border-radius: 16px; box-shadow: 0 12px 40px rgba(0,0,0,0.2); max-width: 300px; z-index: 2000;">
+                <h4 style="color: #c73e1d; margin-bottom: 0.5rem;">You're Not Alone</h4>
+                <p style="color: #6c7b7f; font-size: 0.9rem; margin-bottom: 1rem;">Sometimes we all need immediate support:</p>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                    <a href="tel:988" style="background: #c73e1d; color: white; padding: 0.8rem; border-radius: 8px; text-align: center; text-decoration: none; font-weight: 600;">Crisis Lifeline: 988</a>
+                    <a href="#" style="background: #4a3c5c; color: white; padding: 0.8rem; border-radius: 8px; text-align: center; text-decoration: none;">Crisis Chat</a>
+                </div>
+                <button onclick="this.parentElement.style.display='none'" style="position: absolute; top: 10px; right: 10px; background: none; border: none; cursor: pointer; font-size: 1.2rem;">×</button>
+            </div>
+        `;
+        
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = supportHTML;
+        document.body.appendChild(tempDiv.firstChild);
+    }
+    
+    // Check saved mood on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedMood = localStorage.getItem('emotionalWeather');
+        if (savedMood) {
+            setMood(savedMood);
+        }
+        
+        // Initialize mood tracker visibility
+        setTimeout(() => {
+            document.getElementById('moodTracker').style.opacity = '1';
+        }, 2000);
+    });
+    
+    // Minimize/maximize mood tracker
+    function toggleMoodTracker() {
+        const tracker = document.getElementById('moodTracker');
+        tracker.classList.toggle('minimized');
+    }
+
+    // RSS Feed Functions
+    function subscribeRSS() {
+        const feedUrl = window.location.origin + '/feed.xml';
+        
+        // Check if browser supports RSS subscription
+        if (navigator.registerProtocolHandler) {
+            navigator.registerProtocolHandler('web+feed', feedUrl, 'Crazy But Ok RSS');
+        }
+        
+        // Show subscription options with dark humor
+        const options = [
+            'Copy this link to your RSS reader: ' + feedUrl,
+            'Or use these popular services:',
+            '• Feedly - For organized chaos',
+            '• Inoreader - For professional survivors', 
+            '• The Old Reader - For vintage trauma processing'
+        ];
+        
+        alert(`Welcome to the Survivor's Telegraph Network!\n\n${options.join('\n')}\n\nYou're about to get notifications every time I turn a mental breakdown into content. No take-backs.`);
+        
+        // Track subscription attempt
+        console.log('Another survivor joined the telegraph. Current count: 3,848');
+        updateFeedStats();
+    }
+
+    function showEmailOptions() {
+        document.getElementById('emailModal').style.display = 'block';
+    }
+
+    function closeEmailModal() {
+        document.getElementById('emailModal').style.display = 'none';
+    }
+
+    function subscribeEmail(event) {
+        event.preventDefault();
+        const email = event.target.querySelector('input[type="email"]').value;
+        const frequency = document.querySelector('input[name="frequency"]:checked').value;
+        
+        const messages = {
+            daily: "Daily chaos reports incoming. Your inbox will never be boring again.",
+            weekly: "Weekly digest confirmed. Sundays are now Trauma Processing Day.",
+            crisis: "Crisis mode activated. We'll only bother you when shit gets really dark."
+        };
+        
+        alert(`Subscription confirmed!\n\n${messages[frequency]}\n\nWelcome to the club nobody wanted to join.`);
+        
+        closeEmailModal();
+        event.target.reset();
+        
+        // Update stats
+        updateFeedStats();
+    }
+
+    function enableNotifications() {
+        if (!("Notification" in window)) {
+            alert("Your browser doesn't support notifications. Which is probably healthier for you anyway.");
+            return;
+        }
+        
+        if (Notification.permission === "granted") {
+            showTestNotification();
+        } else if (Notification.permission !== "denied") {
+            Notification.requestPermission().then(function (permission) {
+                if (permission === "granted") {
+                    showTestNotification();
+                } else {
+                    alert("Notification permission denied. Your nervous system thanks you.");
+                }
+            });
+        } else {
+            alert("You've already said no to notifications. Good boundaries! I'm proud of you.");
+        }
+    }
+
+    function showTestNotification() {
+        const notification = new Notification("Crazy But Ok", {
+            body: "Test notification: If you're seeing this at 3 AM, you're not alone. New crisis comedy just dropped.",
+            icon: "/favicon.ico",
+            badge: "/badge.ico",
+            tag: "test-notification",
+            requireInteraction: false
+        });
+        
+        notification.onclick = function() {
+            window.focus();
+            notification.close();
+        };
+        
+        alert("Browser notifications enabled!\n\nYou'll now get pinged every time I turn trauma into art. It's like a support group, but lonelier.");
+    }
+
+    function updateFeedStats() {
+        // Animate the subscriber count
+        const statElements = document.querySelectorAll('.feed-stat strong');
+        if (statElements.length > 0) {
+            const currentCount = parseInt(statElements[0].textContent.replace(/,/g, ''));
+            const newCount = currentCount + 1;
+            statElements[0].textContent = newCount.toLocaleString();
+            
+            // Add a subtle animation
+            statElements[0].style.color = 'var(--deep-red)';
+            setTimeout(() => {
+                statElements[0].style.color = 'var(--accent-color)';
+            }, 500);
+        }
+    }
+
+    // Generate RSS Feed (This would typically be server-side)
+    function generateRSSFeed() {
+        const posts = [
+            {
+                title: "The Day I Realized My Marriage Had a Credit Score",
+                link: "https://crazybutok.com/blog/marriage-credit-score",
+                description: "And it was subprime. Standing in Target, watching my husband interrogate a teenage employee about surveillance cameras, I realized our relationship had been downgraded to junk bond status.",
+                pubDate: new Date('2025-01-15'),
+                category: "Marriage & Madness"
+            },
+            {
+                title: "Love Languages for the Psychiatrically Adventurous",
+                link: "https://crazybutok.com/blog/love-languages",
+                description: "His was 'Acts of Surveillance.' Mine became 'Quality Time with Reality.' We were not compatible.",
+                pubDate: new Date('2025-01-08'),
+                category: "Dark Psychology"
+            },
+            {
+                title: "The Gaslighting Olympics: A Spectator's Guide",
+                link: "https://crazybutok.com/blog/gaslighting-olympics",
+                description: "Gold medal goes to 'That never happened.' Silver to 'You're too sensitive.' Bronze? 'I was just joking—where's your sense of humor?'",
+                pubDate: new Date('2024-12-28'),
+                category: "Survival Humor"
+            }
+        ];
+        
+        const rssXML = `<?xml version="1.0" encoding="UTF-8"?>
+```
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Crazy But Ok - Dispatches from the Edge</title>
+    <link>https://crazybutok.com</link>
+    <description>Where mental health survival becomes art, trauma becomes comedy, and your story matters exactly as messy as it is.</description>
+    <language>en-us</language>
+    <pubDate>${new Date().toUTCString()}</pubDate>
+    <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
+    <atom:link href="https://crazybutok.com/feed.xml" rel="self" type="application/rss+xml"/>
+    ${posts.map(post => `
+    <item>
+      <title><![CDATA[${post.title}]]></title>
+      <link>${post.link}</link>
+      <guid isPermaLink="true">${post.link}</guid>
+      <description><![CDATA[${post.description}]]></description>
+      <pubDate>${post.pubDate.toUTCString()}</pubDate>
+      <category>${post.category}</category>
+    </item>`).join('')}
+  </channel>
+</rss>`;
+
+```
+        return rssXML;
+    }
+
+    // Check for new content periodically (mock implementation)
+    function checkForNewContent() {
+        const lastCheck = localStorage.getItem('lastContentCheck');
+        const now = Date.now();
+        
+        if (!lastCheck || now - parseInt(lastCheck) > 86400000) { // 24 hours
+            // In a real implementation, this would check the server
+            console.log('Checking for fresh trauma to process into art...');
+            localStorage.setItem('lastContentCheck', now.toString());
+            
+            // Randomly show a notification (10% chance)
+            if (Math.random() < 0.1 && Notification.permission === "granted") {
+                new Notification("New Post: The Container Store Incident Part 47", {
+                    body: "He alphabetized the sticky notes. By security clearance level.",
+                    icon: "/favicon.ico"
+                });
+            }
+        }
+    }
+
+    // Initialize feed features on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check for new content
+        checkForNewContent();
+        
+        // Add RSS icon animation on hover
+        const rssButton = document.querySelector('.rss-button');
+        if (rssButton) {
+            rssButton.addEventListener('mouseenter', function() {
+                this.querySelector('.rss-icon').style.animation = 'pulse 0.5s ease-in-out';
+            });
+            rssButton.addEventListener('mouseleave', function() {
+                this.querySelector('.rss-icon').style.animation = 'none';
+            });
+        }
+        
+        // Close email modal when clicking outside
+        window.onclick = function(event) {
+            const emailModal = document.getElementById('emailModal');
+            if (event.target == emailModal) {
+                emailModal.style.display = 'none';
+            }
+        }
+    });
+
+    // Add pulse animation for RSS icon
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+    `;
+    document.head.appendChild(style);
+
+    // Mock function to display feed in console (for development)
+    console.log('%c RSS Feed Active', 'font-size: 14px; color: #ff6b47; font-weight: bold;');
+    console.log('%c Subscribe at: /feed.xml', 'font-size: 12px; color: #5fb3d4;');
+    console.log('%c Current subscribers: 3,847 beautiful disasters', 'font-size: 12px; color: #8e9aaf;');
+    function openComicModal(comicType) {
+        const modal = document.getElementById('comicModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        // Expanded comic content with dark humor and psychological depth
+        const comicContent = {
+            sticky: {
+                title: 'The Sticky Note Security System',
+                content: `
+                    <h2>The Sticky Note Security System</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">A five-tier clearance system for plastic containers. Because normal organization is for people without mania.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Clearance Levels:</h3>
+                        <ul style="color: #2c2c2c; line-height: 2;">
+                            <li><strong>Level 1 (Yellow):</strong> Basic Access - Holiday decorations</li>
+                            <li><strong>Level 2 (Green):</strong> Standard Clearance - Office supplies</li>
+                            <li><strong>Level 3 (Blue):</strong> Elevated Access - Important documents</li>
+                            <li><strong>Level 4 (Pink):</strong> Elite Operations - His special projects</li>
+                            <li><strong>Level 5 (Red):</strong> Maximum Security - "Don't even think about it"</li>
+                        </ul>
+                    </div>
+                    <p style="color: #6c7b7f;">The system appeared overnight. By morning, our entire storage room looked like a classified government facility. Each container had multiple sticky notes detailing access protocols, handling instructions, and consequences for unauthorized entry.</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"Only he understood the system. The rest of us were just visitors in his organizational matrix."</p>
+                `
+            },
+            gopro: {
+                title: 'Lights, Camera, Courthouse',
+                content: `
+                    <h2>Lights, Camera, Courthouse</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">The day my husband decided traffic court was a conspiracy and documentation was his weapon.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Evidence Kit:</h3>
+                        <ul style="color: #2c2c2c; line-height: 2;">
+                            <li>One GoPro (head-mounted)</li>
+                            <li>Two backup cameras (pocket and briefcase)</li>
+                            <li>Three audio recorders ("for triangulation")</li>
+                            <li>47 pages of "evidence" printed in color</li>
+                            <li>A PowerPoint presentation on USB (just in case)</li>
+                        </ul>
+                    </div>
+                    <p style="color: #6c7b7f;">He walked into that courtroom like a one-man documentary crew. The judge's expression went from confused to concerned to completely bewildered as my husband began his opening statement about "systemic injustice in parking enforcement."</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"The bailiff had to explain that this was traffic court, not the Supreme Court. The distinction was lost on him."</p>
+                `
+            },
+            echo: {
+                title: 'Smart Home Sentience',
+                content: `
+                    <h2>Smart Home Sentience</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">When Alexa became family and our house developed consciousness.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Echo Census:</h3>
+                        <ul style="color: #2c2c2c; line-height: 2;">
+                            <li>Living Room: 3 Echos ("for surround intelligence")</li>
+                            <li>Kitchen: 4 devices (one per wall)</li>
+                            <li>Bedroom: 2 (one for each nightstand)</li>
+                            <li>Bathroom: 1 waterproof model</li>
+                            <li>Garage: 2 ("The car needs to hear too")</li>
+                            <li>Total: 17 Alexas for a 2-bedroom apartment</li>
+                        </ul>
+                    </div>
+                    <p style="color: #6c7b7f;">They all had different wake words. They all had different voices. Sometimes they talked to each other when we weren't home. The neighbors started asking about the "parties" we were having.</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"I'm pretty sure they achieved collective consciousness around month three. By month six, they were making their own shopping lists."</p>
+                `
+            },
+            ipad: {
+                title: 'Love Poems Nobody Asked For',
+                content: `
+                    <h2>The iPad Incident: A PowerPoint Presentation of Love</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">When couples therapy meets corporate presentation skills meets untreated mania.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Presentation Highlights:</h3>
+                        <ul style="color: #2c2c2c; line-height: 2;">
+                            <li>Slide 1-15: "Why You're Wrong: A Data-Driven Analysis"</li>
+                            <li>Slide 16-30: "Historical Precedents for My Behavior"</li>
+                            <li>Slide 31-46: "Graphs Proving My Love (Adjusted for Inflation)"</li>
+                            <li>Slide 47: A haiku about commitment</li>
+                            <li>Slide 48-72: "Future Projections of Our Happiness (If You'd Just Listen)"</li>
+                        </ul>
+                    </div>
+                    <p style="color: #6c7b7f;">The therapist's pen stopped moving somewhere around slide 23. By slide 47, she was googling "how to fire a client ethically."</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"He had animations. The haiku dissolved in like stardust. Our marriage dissolved in real time."</p>
+                `
+            },
+            inventory: {
+                title: 'When Excel Became a Lifestyle',
+                content: `
+                    <h2>The Great Inventory of 2023</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">Some people count sheep. He counted everything else.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Database Included:</h3>
+                        <ul style="color: #2c2c2c; line-height: 2;">
+                            <li>2,847 individual items catalogued</li>
+                            <li>47 Excel tabs (one for each room, drawer, and "zone")</li>
+                            <li>Conditional formatting for "security levels"</li>
+                            <li>Pivot tables analyzing sock distribution patterns</li>
+                            <li>A macro that sent me daily inventory reports</li>
+                        </ul>
+                    </div>
+                    <p style="color: #6c7b7f;">He knew we had 73 pens (31 blue, 28 black, 14 miscellaneous). He couldn't remember our anniversary.</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"The spreadsheet had a spreadsheet. That spreadsheet had children. We never did."</p>
+                `
+            },
+            ice: {
+                title: 'The Ice Water Incidents',
+                content: `
+                    <h2>Summer of Ice: Where Comedy Gets Dark</h2>
+                    <p style="color: #ff6b47; margin: 1rem 0;"><strong>Content Warning:</strong> This comic deals with psychological abuse. Read with care.</p>
+                    <p style="color: #6c7b7f;">3 AM. The shock of ice water. "You need to be more alert." Some stories are too dark for punchlines, but humor becomes the only way to tell them without drowning.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <p style="color: #2c2c2c;">This is where the laughter stops being easy. Where you realize you're using comedy like a life raft in an ocean of trauma. Where "crazy but ok" becomes less of a title and more of a desperate prayer.</p>
+                    </div>
+                    <p style="color: #6c7b7f;">I draw this comic not because it's funny, but because if I don't turn it into art, it remains a weapon pointed at my psyche.</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"Some nights I still wake up expecting ice. Now I make my own coffee. Hot. Deliberately hot."</p>
+                `
+            },
+            parking: {
+                title: 'The Citizen\'s Arrest Phase',
+                content: `
+                    <h2>Parking Lot Justice Warrior</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">When your husband becomes a self-appointed enforcer of parking morality.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Incident Report:</h3>
+                        <ul style="color: #2c2c2c; line-height: 2;">
+                            <li>Location: Whole Foods, produce section adjacent</li>
+                            <li>Violation: "Egregious diagonal parking"</li>
+                            <li>Response: Attempted citizen's arrest</li>
+                            <li>Witnesses: 47 confused shoppers</li>
+                            <li>Kale casualties: Unknown but significant</li>
+                        </ul>
+                    </div>
+                    <p style="color: #6c7b7f;">Security footage shows him reading Miranda rights from an index card while blocking a Prius with his body. The driver was his therapist's receptionist.</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"We can never go back to that Whole Foods. Or any Whole Foods. The kale remembers."</p>
+                `
+            },
+            boundaries: {
+                title: 'The Therapist Who Fired Us',
+                content: `
+                    <h2>Professional Boundaries: A Case Study</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">Even mental health professionals have limits. We found them.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Termination Letter (Paraphrased):</h3>
+                        <p style="color: #2c2c2c; line-height: 1.8;">"After careful consideration and consultation with my supervisor, my supervisor's supervisor, and a priest (just to be safe), I must inform you that our therapeutic relationship has reached its natural conclusion. By which I mean, please don't come back. Ever. I'm moving to Vermont."</p>
+                    </div>
+                    <p style="color: #6c7b7f;">She lasted eight sessions. The previous record was three. We had a trophy made.</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"Her eye started twitching in session four. By session seven, she was taking notes in a different language. Latin, I think."</p>
+                `
+            },
+            conspiracy: {
+                title: 'When Our Living Room Became a Crime Board',
+                content: `
+                    <h2>The String Theory of Everything Wrong</h2>
+                    <p style="color: #6c7b7f; margin: 1rem 0;">Beautiful Mind meets Beautiful Disaster meets Home Depot's entire string section.</p>
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47; margin-bottom: 1rem;">The Connections:</h3>
+                        <ul style="color: #2c2c2c; line-height: 2;">
+                            <li>The mailman → The government → The birds → Not real</li>
+                            <li>Our neighbor → Secret agent → Cat owner → Suspicious</li>
+                            <li>That cloud → Chemtrails → Mind control → Thursday's headache</li>
+                            <li>The grocery store → Surveillance state → Why we're out of milk</li>
+                            <li>Everything → Connected → Red string → $847 at craft stores</li>
+                        </ul>
+                    </div>
+                    <p style="color: #6c7b7f;">The cat figured it out first. Started avoiding the living room. Smart cat.</p>
+                    <p style="color: #6c7b7f; font-style: italic;">"I found myself in the middle of the web one day, literally. Connected to the toaster by six degrees of red yarn. The toaster was guilty of something. We never found out what."</p>
+                `
+            }
+        };
+        
+        modalContent.innerHTML = comicContent[comicType].content;
+        modal.style.display = 'block';
+    }
+
+    // Blog Post Modal Function
+    function openBlogPost(postType) {
+        const modal = document.getElementById('comicModal');
+        const modalContent = document.getElementById('modalContent');
+        
+        const blogPosts = {
+            credit: {
+                title: 'The Day I Realized My Marriage Had a Credit Score',
+                content: `
+                    <h2>The Day I Realized My Marriage Had a Credit Score</h2>
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">And it was subprime.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">You know that moment when you're standing in Target, watching your husband interrogate a teenage employee about the surveillance capabilities of their security cameras—not because he's planning to steal, but because he needs to know if "they" are watching—and you realize your relationship has officially been downgraded to junk bond status?</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">That was Tuesday. By Thursday, we were in the high-risk category. By Saturday, we'd defaulted entirely.</p>
+                    
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47;">The Credit Report:</h3>
+                        <p style="color: #2c2c2c; line-height: 1.8;">Payment History: Emotional payments consistently 90+ days past due<br>
+                        Credit Utilization: 347% (using way more patience than actually available)<br>
+                        Length of History: 8 years (feels like 47)<br>
+                        Credit Mix: Gaslighting, love-bombing, silent treatment, repeat<br>
+                        New Inquiries: "Why did you look at me like that?" (47 times daily)</p>
+                    </div>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">I tried to refinance. Went to therapy (individual, because couple's therapy had become a performance art piece where he brought props). The therapist suggested I might want to consider "bankruptcy."</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">She meant emotional bankruptcy, but I heard it as permission. Permission to stop making payments on a loan I never agreed to. Permission to stop accruing interest on someone else's emotional debt. Permission to declare myself insolvent and start over.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">The thing about emotional credit scores is that they don't show up on Experian. You can't dispute them with a letter. You can't wait seven years for them to fall off your report. You carry them in your body, in the way you flinch at sudden movements, in the way you apologize for existing.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0; font-style: italic;">But here's the secret they don't tell you: Sometimes bad credit is just evidence that you were brave enough to leave.</p>
+                `
+            },
+            languages: {
+                title: 'Love Languages for the Psychiatrically Adventurous',
+                content: `
+                    <h2>Love Languages for the Psychiatrically Adventurous</h2>
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">His was "Acts of Surveillance." Mine became "Quality Time with Reality."</p>
+                    
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47;">The Five Love Languages (Mania Edition):</h3>
+                        <p style="color: #2c2c2c; line-height: 2;"><strong>1. Words of Affirmation:</strong> "You're not crazy, everyone else is part of the conspiracy"<br>
+                        <strong>2. Quality Time:</strong> 3 AM discussions about how the refrigerator is listening<br>
+                        <strong>3. Acts of Service:</strong> Installing 17 security cameras to "keep you safe"<br>
+                        <strong>4. Physical Touch:</strong> Checking you for tracking devices<br>
+                        <strong>5. Receiving Gifts:</strong> 47 books about government mind control</p>
+                    </div>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">We were not compatible.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">I tried to adapt. Learned to speak his language. Started leaving love notes in places he'd check for bugs. Whispered sweet nothings directly into the smoke detector he was convinced was recording us. Showed affection by helping him organize his evidence binders.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0; font-style: italic;">But love shouldn't require a decoder ring and a psychological diagnosis to understand.</p>
+                `
+            },
+            olympics: {
+                title: 'The Gaslighting Olympics: A Spectator\'s Guide',
+                content: `
+                    <h2>The Gaslighting Olympics: A Spectator's Guide</h2>
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">Gold medal goes to "That never happened." Silver to "You're too sensitive." Bronze? "I was just joking—where's your sense of humor?"</p>
+                    
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47;">Event Schedule:</h3>
+                        <p style="color: #2c2c2c; line-height: 2;"><strong>Morning Session:</strong> Memory Revision Gymnastics<br>
+                        <strong>Afternoon:</strong> Reality Bending (Advanced)<br>
+                        <strong>Evening:</strong> Synchronized Denial<br>
+                        <strong>Late Night:</strong> Freestyle Blame Shifting<br>
+                        <strong>3 AM Bonus Round:</strong> "Wake Up, We Need to Talk About Your Issues"</p>
+                    </div>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">I kept score for eight years. Turns out I was playing a different game entirely. I thought we were partners; he thought we were competitors. I was trying to build something; he was trying to win something.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">The problem with the Gaslighting Olympics is there are no real winners—just varying degrees of psychological casualties. But if you survive long enough, you eventually realize the only way to win is to stop playing.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0; font-style: italic;">I forfeited. Best decision I ever made. Turns out the real prize was finding my own reality again.</p>
+                `
+            },
+            therapy: {
+                title: 'Why I Started Dating My Therapist\'s Cancellation Policy',
+                content: `
+                    <h2>Why I Started Dating My Therapist's Cancellation Policy</h2>
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">It was the healthiest relationship I'd had in years.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">Clear boundaries. Consistent communication. No surprise GoPros. The 24-hour notice requirement? *Chef's kiss* — more consideration than I'd gotten in eight years of marriage.</p>
+                    
+                    <div style="background: linear-gradient(135deg, #fff3f0, #ffe8e1); padding: 2rem; border-radius: 16px; margin: 2rem 0;">
+                        <h3 style="color: #ff6b47;">Why This Relationship Works:</h3>
+                        <p style="color: #2c2c2c; line-height: 2;">• It respects my time<br>
+                        • It values my mental health<br>
+                        • It doesn't gaslight me about appointments<br>
+                        • It never shows up drunk at 3 AM<br>
+                        • It has never once tried to convince me that the government is watching us through the microwave</p>
+                    </div>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0;">My therapist says it's "progress" that I can joke about it now. I told her I'm considering proposing to her late fee structure next. At least it's predictable.</p>
+                    
+                    <p style="color: #6c7b7f; line-height: 1.8; margin: 1.5rem 0; font-style: italic;">She didn't laugh. But she didn't fire me either. That's love, right?</p>
+                `
+            }
+        };
+        
+        modalContent.innerHTML = blogPosts[postType].content;
+        modal.style.display = 'block';
+    }
+
+    // Comic filtering function
+    function filterComics(category) {
+        const comics = document.querySelectorAll('.comic-card');
+        const buttons = document.querySelectorAll('.filter-btn');
+        
+        // Update active button
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.onclick.toString().includes(category)) {
+                btn.classList.add('active');
+            }
+        });
+        
+        // Show/hide comics
+        comics.forEach(comic => {
+            if (category === 'all' || comic.dataset.category === category) {
+                comic.style.display = 'block';
+                setTimeout(() => {
+                    comic.style.opacity = '1';
+                    comic.style.transform = 'translateY(0)';
+                }, 100);
+            } else {
+                comic.style.opacity = '0';
+                comic.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    comic.style.display = 'none';
+                }, 300);
+            }
+        });
+    }
+
+    function closeComicModal() {
+        document.getElementById('comicModal').style.display = 'none';
+    }
+
+    // Close modal when clicking outside
+    window.onclick = function(event) {
+        const modal = document.getElementById('comicModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    }
+
+    // Comic button handling
+    document.querySelectorAll('.comic-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.comic-card, .product-card, .feature, .about-text, .timeline-item, .testimonial').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Animate stats
+    function animateStats() {
+        const stats = document.querySelectorAll('.stat-number');
+        stats.forEach(stat => {
+            if (stat.textContent === '∞') return;
+            
+            const finalValue = parseInt(stat.textContent.replace(/[^\d]/g, ''));
+            if (isNaN(finalValue)) return;
+            
+            let currentValue = 0;
+            const increment = finalValue / 50;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= finalValue) {
+                    currentValue = finalValue;
+                    clearInterval(timer);
+                }
+                
+                if (finalValue >= 1000) {
+                    stat.textContent = (Math.floor(currentValue / 1000) + 'k');
+                } else {
+                    stat.textContent = Math.floor(currentValue).toLocaleString();
+                }
+            }, 30);
+        });
+    }
+
+    // Trigger stats animation when hero section is visible
+    const heroObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStats();
+                heroObserver.unobserve(entry.target);
+            }
+        });
+    });
+
+    heroObserver.observe(document.querySelector('.hero'));
+
+    // Add personality to console
+    console.log('%c Welcome to Crazy But Ok', 'font-size: 24px; color: #ff6b47; font-weight: bold;');
+    console.log('%c Where trauma becomes art and healing happens through humor. 🎨✨', 'font-size: 14px; color: #5fb3d4;');
+    console.log('%c If you\'re inspecting this code looking for Easter eggs...', 'font-size: 12px; color: #8e9aaf;');
+    console.log('%c ...you\'re my kind of person. Welcome to the chaos. 💜', 'font-size: 12px; color: #ff8fa3;');
+</script>
+```
+
+</body>
+</html>
