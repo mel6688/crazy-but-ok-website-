@@ -1,0 +1,1053 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crazy But Ok - Where Survival Becomes Art</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1e3a3a;
+            --secondary-color: #5fb3d4;
+            --accent-color: #ff6b47;
+            --healing-orange: #f4a261;
+            --text-dark: #2c2c2c;
+            --text-light: #6c7b7f;
+            --warm-white: #fafafa;
+            --soft-gray: #8e9aaf;
+            --healing-pink: #ff8fa3;
+            --shadow: 0 8px 32px rgba(0,0,0,0.12);
+            --border-radius: 16px;
+            --gradient-bg: linear-gradient(135deg, #1e3a3a 0%, #2c5f5f 100%);
+            --warm-gradient: linear-gradient(135deg, #ff6b47 0%, #f4a261 100%);
+        }
+
+```
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        background-color: var(--warm-white);
+        overflow-x: hidden;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+    }
+
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(250, 250, 250, 0.95);
+        backdrop-filter: blur(10px);
+        z-index: 1000;
+        padding: 1rem 0;
+        transition: all 0.3s ease;
+        border-bottom: 1px solid rgba(95, 179, 212, 0.1);
+    }
+
+    nav.scrolled {
+        box-shadow: var(--shadow);
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        text-decoration: none;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: var(--text-dark);
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        color: var(--accent-color);
+    }
+
+    .cta-button {
+        background: var(--accent-color);
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background: #ff5630;
+        transform: translateY(-2px);
+        box-shadow: var(--shadow);
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 140px 0 100px;
+        background: var(--gradient-bg);
+        color: white;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" opacity="0.1"><circle cx="100" cy="100" r="3" fill="%23ffffff"/><circle cx="300" cy="200" r="2" fill="%23ffffff"/><circle cx="500" cy="150" r="4" fill="%23ffffff"/><circle cx="700" cy="300" r="1.5" fill="%23ffffff"/><circle cx="900" cy="250" r="3.5" fill="%23ffffff"/></svg>');
+    }
+
+    .hero-content {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        max-width: 900px;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3rem, 6vw, 5rem);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.1;
+    }
+
+    .hero-tagline {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--healing-pink);
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.3rem;
+        opacity: 0.9;
+        margin-bottom: 3rem;
+        font-weight: 400;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cta {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-bottom: 4rem;
+    }
+
+    .btn-primary {
+        background: var(--accent-color);
+        color: white;
+        padding: 1.2rem 2.5rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: 2px solid var(--accent-color);
+    }
+
+    .btn-secondary {
+        background: transparent;
+        color: white;
+        padding: 1.2rem 2.5rem;
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        border: 2px solid white;
+    }
+
+    .btn-primary:hover, .btn-secondary:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow);
+    }
+
+    .btn-secondary:hover {
+        background: white;
+        color: var(--primary-color);
+    }
+
+    /* Community Stats */
+    .stats {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-top: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .stat {
+        text-align: center;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+        font-weight: 800;
+        color: var(--healing-pink);
+        display: block;
+    }
+
+    .stat-label {
+        opacity: 0.8;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    /* About Section */
+    .about {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .about-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5rem;
+        align-items: center;
+    }
+
+    .about-text h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 2rem;
+    }
+
+    .about-text p {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
+    }
+
+    .quote-highlight {
+        background: linear-gradient(135deg, #fff3f0, #ffe8e1);
+        padding: 2rem;
+        border-radius: var(--border-radius);
+        border-left: 4px solid var(--accent-color);
+        margin: 2rem 0;
+        font-style: italic;
+        color: var(--text-dark);
+        font-size: 1.1rem;
+    }
+
+    .about-image {
+        position: relative;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        background: var(--warm-gradient);
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+        box-shadow: var(--shadow);
+    }
+
+    /* Featured Comics Section */
+    .featured-comics {
+        padding: 100px 0;
+        background: var(--warm-white);
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .section-header h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+    }
+
+    .section-header p {
+        color: var(--text-light);
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .comics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .comic-card {
+        background: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+    }
+
+    .comic-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .comic-image {
+        height: 300px;
+        background: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-light);
+        font-size: 1.2rem;
+        border-bottom: 1px solid #eee;
+    }
+
+    .comic-content {
+        padding: 2rem;
+    }
+
+    .comic-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .comic-excerpt {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .comic-button {
+        color: var(--accent-color);
+        text-decoration: none;
+        font-weight: 600;
+        border-bottom: 2px solid transparent;
+        transition: border-color 0.3s ease;
+    }
+
+    .comic-button:hover {
+        border-bottom-color: var(--accent-color);
+    }
+
+    /* Products Section */
+    .products {
+        padding: 100px 0;
+        background: white;
+    }
+
+    .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2.5rem;
+    }
+
+    .product-card {
+        background: white;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(95, 179, 212, 0.1);
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .product-image {
+        height: 220px;
+        background: var(--warm-gradient);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    .product-content {
+        padding: 2rem;
+    }
+
+    .product-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .product-description {
+        color: var(--text-light);
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    .product-price {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        margin-bottom: 1.5rem;
+    }
+
+    .product-button {
+        width: 100%;
+        background: var(--accent-color);
+        color: white;
+        padding: 1rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 1rem;
+    }
+
+    .product-button:hover {
+        background: #ff5630;
+    }
+
+    /* Community Section */
+    .community {
+        padding: 100px 0;
+        background: var(--warm-white);
+    }
+
+    .community-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2.5rem;
+        margin-top: 3rem;
+    }
+
+    .feature {
+        text-align: center;
+        padding: 2.5rem;
+        border-radius: var(--border-radius);
+        background: white;
+        transition: all 0.3s ease;
+        box-shadow: var(--shadow);
+    }
+
+    .feature:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    }
+
+    .feature-icon {
+        width: 70px;
+        height: 70px;
+        background: var(--warm-gradient);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .feature h3 {
+        font-size: 1.3rem;
+        color: var(--text-dark);
+        margin-bottom: 1rem;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .feature p {
+        color: var(--text-light);
+        line-height: 1.6;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+        padding: 100px 0;
+        background: var(--primary-color);
+        color: white;
+    }
+
+    .newsletter-content {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .newsletter h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter p {
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        font-size: 1.1rem;
+    }
+
+    .newsletter-form {
+        display: flex;
+        gap: 1rem;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .newsletter-input {
+        flex: 1;
+        padding: 1rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+    }
+
+    .newsletter-button {
+        background: var(--accent-color);
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: var(--border-radius);
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .newsletter-button:hover {
+        background: #ff5630;
+    }
+
+    /* Footer */
+    footer {
+        background: var(--text-dark);
+        color: white;
+        padding: 3rem 0 1rem;
+    }
+
+    .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+        margin-bottom: 1rem;
+        color: var(--secondary-color);
+        font-family: 'Playfair Display', serif;
+    }
+
+    .footer-section a {
+        color: white;
+        text-decoration: none;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        display: block;
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-section a:hover {
+        opacity: 1;
+        color: var(--healing-pink);
+    }
+
+    .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.1);
+        padding-top: 2rem;
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    /* Mobile Menu */
+    .mobile-menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        cursor: pointer;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+        }
+
+        .mobile-menu-toggle {
+            display: block;
+        }
+
+        .about-content {
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        .hero-cta {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .newsletter-form {
+            flex-direction: column;
+        }
+
+        .stats {
+            gap: 2rem;
+        }
+
+        .comics-grid, .products-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .fade-in-up {
+        animation: fadeInUp 0.6s ease-out;
+    }
+
+    /* Accessibility */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+    /* Focus styles */
+    *:focus {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+    }
+</style>
+```
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">Crazy But Ok</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#comics">Comics</a></li>
+                    <li><a href="#products">Resources</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+                <a href="#newsletter" class="cta-button">Join Us</a>
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu">☰</button>
+            </div>
+        </div>
+    </nav>
+
+```
+<!-- Hero Section -->
+<section id="home" class="hero">
+    <div class="container">
+        <div class="hero-content fade-in-up">
+            <h1>Crazy But Ok</h1>
+            <p class="hero-tagline">Toxic Love. True Healing.</p>
+            <p class="hero-subtitle">Where mental health survival becomes art, trauma becomes comedy, and your story matters exactly as messy as it is.</p>
+            <div class="hero-cta">
+                <a href="#comics" class="btn-primary">Read My Comics</a>
+                <a href="#products" class="btn-secondary">Get Resources</a>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">15k</span>
+                    <span class="stat-label">Survivors Connected</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">247</span>
+                    <span class="stat-label">Comics Created</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Healing Possible</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="about">
+    <div class="container">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>The Story Behind the Stories</h2>
+                <p>Some summers, ice water gets thrown on sleeping children. Some courtrooms witness GoPro-wearing husbands declaring war on authority. Some therapy sessions end with iPad love poems that nobody asked for.</p>
+                
+                <p>This is what happens when bipolar disorder meets a marriage, when mania creates organizational systems for containers, when reality becomes so surreal you have to document it or risk losing your mind entirely.</p>
+
+                <div class="quote-highlight">
+                    "The summer of 2023 brought with it a turning point in my life—a moment when I had to confront the chaos of living with a partner battling severe mental health issues."
+                </div>
+                
+                <p>I'm not here to tell you a neat recovery story with Instagram-worthy milestones. I'm here to share the messy, complicated, darkly hilarious truth of surviving someone else's mental illness while trying to keep your own sanity intact.</p>
+                
+                <p>Because sometimes the only way to process trauma is to turn it into art. And sometimes art looks like comics about sticky note security clearance systems.</p>
+            </div>
+            <div class="about-image">
+                <div>
+                    <strong>Author Photo</strong><br>
+                    <em>Survivor. Storyteller. Professional Chaos Documenter.</em>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Comics Section -->
+<section id="comics" class="featured-comics">
+    <div class="container">
+        <div class="section-header">
+            <h2>Trauma Turned Into Art</h2>
+            <p>Comics that document the beautiful absurdity of survival. Because sometimes you have to laugh or you'll never stop crying.</p>
+        </div>
+        <div class="comics-grid">
+            <div class="comic-card">
+                <div class="comic-image">The Container Store Intervention</div>
+                <div class="comic-content">
+                    <h3 class="comic-title">The Sticky Note Security System</h3>
+                    <p class="comic-excerpt">Level 4 Pink: Elite Container Operations. "Only he had this level." When your husband creates a five-tier clearance system for storage boxes, you document it.</p>
+                    <a href="#" class="comic-button">Read Full Series</a>
+                </div>
+            </div>
+            
+            <div class="comic-card">
+                <div class="comic-image">Courtroom Chaos</div>
+                <div class="comic-content">
+                    <h3 class="comic-title">Lights, Camera, Courthouse</h3>
+                    <p class="comic-excerpt">"Most people bring a lawyer. He brought a GoPro." The day my husband wore a camera to traffic court and declared war on authority.</p>
+                    <a href="#" class="comic-button">See the Madness</a>
+                </div>
+            </div>
+            
+            <div class="comic-card">
+                <div class="comic-image">The Echo Migration</div>
+                <div class="comic-content">
+                    <h3 class="comic-title">Smart Home Sentience</h3>
+                    <p class="comic-excerpt">"One in every room. Two for stereo. Three in the kitchen. 'Just in case.'" When your house achieves consciousness and files for emotional independence.</p>
+                    <a href="#" class="comic-button">Enter the Matrix</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Products Section -->
+<section id="products" class="products">
+    <div class="container">
+        <div class="section-header">
+            <h2>Survival Tools for Real Life</h2>
+            <p>Resources created by someone who survived. No clinical jargon, no false promises—just honest tools for the beautiful mess of healing.</p>
+        </div>
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">Featured Memoir</div>
+                <div class="product-content">
+                    <h3 class="product-title">"The Last Container"</h3>
+                    <p class="product-description">My complete story. The ice water. The GoPro. The therapy iPad incident. Everything that happened when love became delusion and survival became art.</p>
+                    <div class="product-price">Coming Soon</div>
+                    <button class="product-button">Pre-Order Memoir</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">Workbook Collection</div>
+                <div class="product-content">
+                    <h3 class="product-title">"Reclaiming Me" Workbook</h3>
+                    <p class="product-description">Worksheets for walking away from toxic relationships. Including "The Emotional Hoarder" and "Reality Check: Was it love, or was it delusion?"</p>
+                    <div class="product-price">$19.99</div>
+                    <button class="product-button">Download Now</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">Comic Collection</div>
+                <div class="product-content">
+                    <h3 class="product-title">Complete Comic Archive</h3>
+                    <p class="product-description">Every comic, every workbook page, every piece of art I've created from this experience. Trauma processing disguised as entertainment.</p>
+                    <div class="product-price">$12.99</div>
+                    <button class="product-button">Get Collection</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Community Section -->
+<section id="community" class="community">
+    <div class="container">
+        <div class="section-header">
+            <h2>Find Your People</h2>
+            <p>A community for people who understand that sometimes the most healing thing you can do is laugh at the absurdity of survival.</p>
+        </div>
+        <div class="community-features">
+            <div class="feature">
+                <div class="feature-icon">💬</div>
+                <h3>Real Talk Forums</h3>
+                <p>Where you can share the stuff that's too real for Facebook but too important to keep inside. Moderated spaces for authentic healing.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎨</div>
+                <h3>Art Therapy Sharing</h3>
+                <p>Turn your trauma into art. Share your comics, stories, poems—whatever helps you process the beautiful mess of survival.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📚</div>
+                <h3>Resource Library</h3>
+                <p>Practical tools, worksheets, and guides created by survivors for survivors. No clinical jargon—just real help for real life.</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🆘</div>
+                <h3>Crisis Support</h3>
+                <p>Immediate access to resources, helplines, and community support for those 3 AM moments when everything feels impossible.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section id="newsletter" class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Stay Connected</h2>
+            <p>Weekly doses of dark humor, practical tools, and reminders that you're not the only one figuring this out as you go. No toxic positivity, promise.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                <button type="submit" class="newsletter-button">Join</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <a href="mailto:hello@crazybutok.com">hello@crazybutok.com</a>
+                <a href="https://facebook.com/61568004286042">Facebook Community</a>
+                <a href="#">Crisis Resources</a>
+                <a href="#">Community Guidelines</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Resources</h3>
+                <a href="#">All Comics</a>
+                <a href="#">Workbook Downloads</a>
+                <a href="#">Memoir Pre-Order</a>
+                <a href="#">Free Resources</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Community</h3>
+                <a href="#">Member Stories</a>
+                <a href="#">Art Sharing</a>
+                <a href="#">Support Forums</a>
+                <a href="#">Submit Your Story</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Content Disclaimer</a>
+                <a href="#">Mental Health Resources</a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Crazy But Ok. Built by survivors, for survivors. Where trauma becomes art and healing happens through humor.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Newsletter form handling
+    document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const email = this.querySelector('input[type="email"]').value;
+        alert('Welcome to the community! Check your email for our "Reality Check" welcome guide.');
+        this.reset();
+    });
+
+    // Product button handling with realistic responses
+    document.querySelectorAll('.product-button').forEach(button => {
+        button.addEventListener('click', function() {
+            const productTitle = this.closest('.product-card').querySelector('.product-title').textContent;
+            
+            if (productTitle.includes('Memoir')) {
+                alert('Pre-order coming soon! Join the newsletter to be first notified when "The Last Container" is available.');
+            } else if (productTitle.includes('Workbook')) {
+                alert('Redirecting to secure download... (In real implementation, this would connect to your payment processor)');
+            } else if (productTitle.includes('Comic')) {
+                alert('Opening comic archive... (This would link to your comic collection)');
+            }
+        });
+    });
+
+    // Comic button handling
+    document.querySelectorAll('.comic-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const comicTitle = this.closest('.comic-card').querySelector('.comic-title').textContent;
+            alert(`Opening "${comicTitle}" series... (This would display the full comic collection)`);
+        });
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in-up');
+            }
+        });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.comic-card, .product-card, .feature, .about-text').forEach(el => {
+        observer.observe(el);
+    });
+
+    // Mobile menu toggle
+    document.querySelector('.mobile-menu-toggle').addEventListener('click', function() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Add some dynamic stats updates with personality
+    function animateStats() {
+        const stats = document.querySelectorAll('.stat-number');
+        stats.forEach(stat => {
+            if (stat.textContent === '∞') return; // Skip infinity symbol
+            
+            const finalValue = parseInt(stat.textContent.replace(/[^\d]/g, ''));
+            if (isNaN(finalValue)) return;
+            
+            let currentValue = 0;
+            const increment = finalValue / 50;
+            
+            const timer = setInterval(() => {
+                currentValue += increment;
+                if (currentValue >= finalValue) {
+                    currentValue = finalValue;
+                    clearInterval(timer);
+                }
+                stat.textContent = Math.floor(currentValue).toLocaleString();
+            }, 30);
+        });
+    }
+
+    // Trigger stats animation when hero section is visible
+    const heroObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateStats();
+                heroObserver.unobserve(entry.target);
+            }
+        });
+    });
+
+    heroObserver.observe(document.querySelector('.hero'));
+
+    // Add some personality to the page
+    console.log('Welcome to Crazy But Ok - where trauma becomes art and healing happens through humor. 🎨✨');
+</script>
+```
+
+</body>
+</html>
